@@ -32,6 +32,13 @@ pip install -r requirements.txt
 Setup [config.yaml](https://github.com/music-embedding-aiffelthon/Music-embedding/blob/master/config/config.yaml) file to specify dataset folder and model usage.
 
 
+**Step 4.**
+
+Run main.py file.
+```
+python3 main.py
+```
+
 ## Dataset
 * We pretrained Semi-supervised model with [kakao arena dataset](https://arena.kakao.com/c/8), which contains 700,000 mel-spetrograms. It has 48 bins, 1876 time length. 
 * We adjusted 30 to 14 distinct acoustic distinctions for labels to evaluate pretrain model.

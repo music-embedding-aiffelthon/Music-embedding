@@ -30,7 +30,14 @@ pip install -r requirements.txt
 **Step 3.**
 
 Setup [config.yaml](https://github.com/music-embedding-aiffelthon/Music-embedding/blob/master/config/config.yaml) file to specify dataset folder and model usage.
+```
+# --- checkpoint dir ---
+checkpoint_dir: checkpoint
 
+# --- dataset ---
+dataset_dir: /mnt/disks/sdb/dev_dataset  <---- Add your own dataset folder path.
+split_ratio: 0.8  # eval split ratio
+```
 
 **Step 4.**
 

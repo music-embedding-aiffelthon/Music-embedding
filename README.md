@@ -76,5 +76,5 @@ python3 main.py
 |-------------|-------------|-------------|
 | SampleCNN (supervised) | 64 / - / 200 | (Add result later) |
 | Autoencoder (semi-supervised) | 48 / 10 / 200 | (Add result later) |
-| SimCLR | 128 / 10 / 200 | 49 |
+| SimCLR | 128 / 10 / 200 | 50.86 |
 | BYOL | 64 / 10 / 200 | 50 (Add result later) |

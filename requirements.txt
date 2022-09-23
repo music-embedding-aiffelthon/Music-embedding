@@ -1,5 +1,6 @@
 jax
 flax
+flaxmodels
 optax
 wandb
 torch

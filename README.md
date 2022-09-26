@@ -7,7 +7,7 @@ Jax/Flax implementation of BYOL, SimCLR, Convolutional Autoencoder.
 
 * With this Jax/Flax implemented Semi-supervised model, you can generate general representation of music.
 * We achieve decent result on the genre classification for kakao arena dataset with Semi-supervised model.
-* You can use accuarcy for 3 pretrain method with this repository.
+* You can compare 3 pretrain method with this repository.
 
 ## Quick start
 **Step 1.**

@@ -13,7 +13,7 @@ import flax.linen as nn
 from torch.utils.data import DataLoader, random_split
 
 from utils.config_hook import yaml_config_hook
-from utils.adjust_dataloader import mel_dataset # dataloader for kakao mel dataset. https://arena.kakao.com/c/8
+from utils.dataloader import mel_dataset # dataloader for kakao mel dataset. https://arena.kakao.com/c/8
 
 
 # --- please read README.md carefully. ---

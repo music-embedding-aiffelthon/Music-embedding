@@ -77,6 +77,6 @@ python3 main.py
 | Encoder / Model | Batch-size | pretrain epochs / linear evaluation epochs |  ROC-AUC |
 |-------------|-----|-------|-------------|
 | SampleCNN (supervised) | 64 | - / 200 | 58.49% |
-| Autoencoder (semi-supervised) | 48 | 10 / 200 | 37.41% |
-| SimCLR | 128 | 10 / 200 | 53.39% |
-| BYOL | 64 | 10 / 200 | 53.39% |
+| [Autoencoder](https://github.com/music-embedding-aiffelthon/Music-embedding/releases/download/1.1/autoencoder.zip) | 48 | 10 / 200 | 37.41% |
+| [SimCLR](https://github.com/music-embedding-aiffelthon/Music-embedding/releases/download/1.1/SimCLR_128.zip) | 128 | 10 / 200 | 53.39% |
+| [BYOL](https://github.com/music-embedding-aiffelthon/Music-embedding/releases/download/1.1/BYOL_head_1.zip) | 64 | 10 / 200 | 53.39% |

@@ -56,7 +56,7 @@ python3 main.py
 
 * As a first method, we use latent vector of Autoencoder to create general representation.
 * You can use Autoencoder model to change [config.yaml](https://github.com/music-embedding-aiffelthon/Music-embedding/blob/master/config/config.yaml)
-* **Add result**
+* We pretrained with batch size 32, TPU v3-8 23 hours.
 
 ## SimCLR 
 ![1](https://user-images.githubusercontent.com/85149409/191939638-e73076d9-3423-4a20-8a8c-c6cf2d6ba693.png)

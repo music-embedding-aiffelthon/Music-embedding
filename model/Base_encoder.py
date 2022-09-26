@@ -287,8 +287,6 @@ class Decoder(nn.Module):
         
         
         x = nn.ConvTranspose(1, kernel_size=(3,3), strides=[1,1])(x)
-        x = jax.nn.tanh(x)
-        x = jnp.squeeze(x, axis=-1)
         return x
         
 
@@ -308,7 +306,6 @@ class Conv2d_AE(nn.Module):
      
         z = self.encoder(x)
         recon_x = self.decoder(z)
-        recon_x = jnp.expand_dims(recon_x, axis=-1)
         return recon_x
     
     def encode(self, x):

@@ -1,22 +1,22 @@
-from torch.utils.data import Dataset
 import os
-import numpy as np
+
 import json
+import numpy as np
 from tqdm import tqdm
-import pickle
-import copy
+from torch.utils.data import Dataset
+
 
 class mel_dataset(Dataset):
 
     def __init__(self, data_dir, top_genre):
         
         super(mel_dataset, self).__init__()
-        meta_file_path = os.path.join(data_dir, "adjust_song_meta.json")
+        meta_file_path = os.path.join(data_dir, "song_meta.json")
         if os.path.isfile(meta_file_path):
             with open(meta_file_path) as f:
                 song_meta = json.load(f)
         else:
-            raise FileNotFoundError(f'No such file or directory: {data_dir}/adjust_song_meta.json')
+            raise FileNotFoundError(f'No such file or directory: {data_dir}/song_meta.json')
 
         song_dict = {}
         genre_dict = {}
@@ -40,14 +40,13 @@ class mel_dataset(Dataset):
             listdir = [os.path.join(roots, file) for file in files]
             for i in listdir:
                 
-                if ".pickle" in i:
-                    with open(i, 'rb') as handle:
-                        b = pickle.load(handle)
+                if ".npy" in i:
+                    b = np.load(i)
                     if b.shape[1] != 1876:
                         pass
                     else: 
                         try:
-                            song_id = i.split('/')[-1].replace('.pickle','')
+                            song_id = i.split('/')[-1].replace('.npy','')
                             result_dict[i] = song_dict[song_id]
                         except:
                             print(song_id,'passed.')
@@ -101,9 +100,7 @@ class mel_dataset(Dataset):
         self.label = label
         
     def __getitem__(self, index):
-        with open(self.file_list[index], 'rb') as handle:
-            x = pickle.load(handle)
-        self.x = x
+        self.x = np.load(self.file_list[index])
         return self.x, self.label[index]
     
     def __len__(self):

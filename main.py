@@ -41,8 +41,8 @@ if __name__=='__main__':
     test_size = dataset_size - train_size
     train_dataset, test_dataset, = random_split(data, [train_size, test_size])
     
-    train_dataloader = DataLoader(train_dataset, batch_size=64, shuffle=True, num_workers=0, collate_fn=collate_batch)
-    test_dataloader = DataLoader(test_dataset, batch_size=64, shuffle=True, num_workers=0, collate_fn=collate_batch)        
+    train_dataloader = DataLoader(train_dataset, batch_size=config['pretrain_batch_size'], shuffle=True, num_workers=0, collate_fn=collate_batch)
+    test_dataloader = DataLoader(test_dataset, batch_size=config['pretrain_batch_size'], shuffle=True, num_workers=0, collate_fn=collate_batch)        
     
     
 ####  You can set label fraction size with scripts below.

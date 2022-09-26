@@ -72,9 +72,11 @@ python3 main.py
 * We pretrained with batch size 64, TPU v3-8 15 hours.
 
 ## Result
+[Result wandb link](https://wandb.ai/aiffelthon/CLR/reports/Music-embedding-with-semi-supervised-learning--VmlldzoyNjk1Nzgy)
+
 | Encoder / Model | Batch-size | pretrain epochs / linear evaluation epochs |  ROC-AUC |
 |-------------|-----|-------|-------------|
-| SampleCNN (supervised) | 64 | - / 200 | (Add result later) |
-| Autoencoder (semi-supervised) | 48 | 10 / 200 | (Add result later) |
-| SimCLR | 128 | 10 / 200 | 50.86 |
-| BYOL | 64 | 10 / 200 | 50 (Add result later) |
+| SampleCNN (supervised) | 64 | - / 200 | 58.49% |
+| Autoencoder (semi-supervised) | 48 | 10 / 200 | 37.41% |
+| SimCLR | 128 | 10 / 200 | 53.39% |
+| BYOL | 64 | 10 / 200 | 53.39% |

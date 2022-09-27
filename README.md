@@ -6,7 +6,7 @@
 Jax/Flax implementation of BYOL, SimCLR, Convolutional Autoencoder.
 
 * With this Jax/Flax implemented Self-supervised model, you can generate general representation of music.
-* We achieved decent [result](https://wandb.ai/aiffelthon/CLR/reports/Music-embedding-with-semi-supervised-learning--VmlldzoyNjk1Nzgy) on the genre classification for kakao arena dataset with Self-supervised model.
+* We achieved decent [result](https://wandb.ai/aiffelthon/CLR/reports/Music-embedding-with-Self-supervised-learning--VmlldzoyNjk1Nzgy) on the genre classification for kakao arena dataset with Self-supervised model.
 * You can compare 3 pretrain method with this repository.
 
 ## Quick start
@@ -72,7 +72,7 @@ python3 main.py
 * We pretrained with batch size 64, TPU v3-8 15 hours.
 
 ## Result
-[Result wandb link](https://wandb.ai/aiffelthon/CLR/reports/Music-embedding-with-semi-supervised-learning--VmlldzoyNjk1Nzgy)
+[Result wandb link](https://wandb.ai/aiffelthon/CLR/reports/Music-embedding-with-Self-supervised-learning--VmlldzoyNjk1Nzgy)
 
 | Encoder / Model | Batch-size | pretrain epochs / linear evaluation epochs |  ROC-AUC |
 |-------------|-----|-------|-------------|

@@ -1,7 +1,7 @@
 # Music embedding with Semi-supervised model
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_9jK0NP-oJDImlXhrObh5g5ID8pOBt6n?usp=sharing)
 
 Jax/Flax implementation of BYOL, SimCLR, Convolutional Autoencoder.
 

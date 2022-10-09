@@ -72,7 +72,7 @@ python3 main.py
 * We pretrained with batch size 64, TPU v3-8 15 hours.
 
 ## Result
-[Result wandb link](https://wandb.ai/aiffelthon/CLR/reports/Music-embedding-with-Self-supervised-learning--VmlldzoyNjk1Nzgy)
+[Result wandb link](https://wandb.ai/aiffelthon/CLR/reports/Music-embedding-with-Self-supervised-learning--VmlldzoyNjk1Nzgy?accessToken=540uprbwjjodpajclfz5pbe3hh40nce1f2s4ksvowld4il4b4tglmhdrrd2ge8wa)
 
 | Encoder / Model | Batch-size | pretrain epochs / linear evaluation epochs |  ROC-AUC |
 |-------------|-----|-------|-------------|

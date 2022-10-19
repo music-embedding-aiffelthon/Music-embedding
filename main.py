@@ -77,7 +77,7 @@ if __name__=='__main__':
     test_feats_pretrain = prepare_data_features(encode_fn, test_dataset)
     
     feats_array = [(x, y) for x,y in train_feats_pretrain]
-    np.save(f'{config['pretrain_model']}_feats_array.npy', feats_array)    
+    np.save(f"{config['pretrain_model']}_feats_array.npy", feats_array)    
     
     
     # --- linear evaluation ---
@@ -90,4 +90,4 @@ if __name__=='__main__':
     
     linear_train_feats = prepare_data_label(linear_encode_fn, train_feats_pretrain)
     linear_array = [(x, y) for x,y in linear_train_feats]
-    np.save(f'{config['pretrain_model']}_linear_array.npy', linear_array)
+    np.save(f"{config['pretrain_model']}_linear_array.npy", linear_array)

@@ -100,9 +100,7 @@ class mel_dataset(Dataset):
         self.label = label
         
     def __getitem__(self, index):
-        with open(self.file_list[index], 'rb') as handle:
-            x = pickle.load(handle)
-        self.x = x
+        self.x = np.load(self.file_list[index])
         return self.x, self.label[index]
     
     def __len__(self):

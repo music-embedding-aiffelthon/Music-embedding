@@ -83,7 +83,8 @@ if __name__=='__main__':
     # --- linear evaluation ---
     
     trainer = linear_evaluation(train_feats_data=train_feats_pretrain,
-                               test_feats_data=test_feats_pretrain)
+                               test_feats_data=test_feats_pretrain,
+                               num_epochs=config['linear_epoch'])
     
     trainer_model = trainer.model.bind({'params':trainer.state.params})
     linear_encode_fn = jax.jit(lambda img: trainer_model.encode(img))

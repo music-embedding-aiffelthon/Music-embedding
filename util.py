@@ -135,7 +135,7 @@ class NumpyDataset(mel_dataset):
 
     
     
-def linear_evaluation(train_feats_data, test_feats_data):
+def linear_evaluation(train_feats_data, test_feats_data, num_epochs):
     # Data loaders
     train_loader = DataLoader(train_feats_data,
                                    batch_size=config['linear_batch_size'],

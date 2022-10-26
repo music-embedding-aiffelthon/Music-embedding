@@ -40,14 +40,13 @@ class mel_dataset(Dataset):
             listdir = [os.path.join(roots, file) for file in files]
             for i in listdir:
                 
-                if ".pickle" in i:
-                    with open(i, 'rb') as handle:
-                        b = pickle.load(handle)
+                if ".npy" in i:
+                    b = np.load(i)
                     if b.shape[1] != 1876:
                         pass
                     else: 
                         try:
-                            song_id = i.split('/')[-1].replace('.pickle','')
+                            song_id = i.split('/')[-1].replace('.npy','')
                             result_dict[i] = song_dict[song_id]
                         except:
                             print(song_id,'passed.')

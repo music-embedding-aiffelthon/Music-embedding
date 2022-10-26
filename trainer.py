@@ -172,7 +172,7 @@ class TrainerModule:
             state_dict = checkpoints.restore_checkpoint(ckpt_dir=self.log_dir, target=None)
         else:
             state_dict = checkpoints.restore_checkpoint(ckpt_dir=self.log_dir, target=None)
-        num_params = sum([np.prod(p.shape) for p in jax.tree_leaves(state_dict)])
+        num_params = sum([np.prod(p.shape) for p in jax.tree_util.tree_leaves(state_dict)])
         self.state = TrainState.create(apply_fn=self.state.apply_fn,
                                        params=unfreeze(state_dict['params']),
                                        batch_stats=unfreeze(state_dict['batch_stats']),

@@ -139,7 +139,7 @@ def linear_evaluation(train_feats_data, test_feats_data, num_epochs):
     # Data loaders
     train_loader = DataLoader(train_feats_data,
                                    batch_size=config['linear_batch_size'],
-                                   shuffle=True,
+                                   shuffle=False,
                                    drop_last=True,
                                    generator=torch.Generator().manual_seed(42),
                                    collate_fn=numpy_collate)

@@ -128,7 +128,8 @@ class NumpyDataset(mel_dataset):
         self.arrays = arrays
 
     def __len__(self):
-        return self.arrays[0].shape[0]
+        return int(self.arrays[0].shape[0]/(config['linear_batch_size']/config['pretrain_batch_size']))
+
 
     def __getitem__(self, idx):
         return [arr[idx] for arr in self.arrays]
